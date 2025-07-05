@@ -1,5 +1,8 @@
-
+"use client";
+import { useTheme } from "next-themes";
 export default function Home() {
+
+
   return (
     <div>
       <h1 className="text-3xl font-bold underline">
@@ -11,6 +14,7 @@ export default function Home() {
       <p className="mt-2">
         Enjoy building your projects!
       </p>
+          
     </div>
   );
 }
