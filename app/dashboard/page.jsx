@@ -1,10 +1,11 @@
 import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
 import { authOptions } from "../api/auth/[...nextauth]/route";
+import TestPost from "@/components/TestPost";
 
 const dashboard = async () => {
   const data = await getServerSession(authOptions);
-  
+
   if (!data?.user.name) {
     redirect("/");
   }
@@ -18,6 +19,7 @@ const dashboard = async () => {
         alt="profile"
         className="w-[69px] rounded-full"
       />
+      <TestPost></TestPost>
    </section>
   );
 };
