@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
 import NavBar from "./NavBar";
-import ThemeTougle from "./ThemTougle";
-import SignIn from "./signIn/SignIn.jsx";
+import ThemeTougle from "../ui/theme/ThemTougle";
+import SignIn from "../signIn/SignIn.jsx";
 import { SessionProvider } from "next-auth/react";
 
 function Header() {
