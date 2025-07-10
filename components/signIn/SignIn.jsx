@@ -9,18 +9,9 @@ const SignIn = () => {
   const [isPopUpOpen, setIsPopUpOpen] = useState(false);
   return (
     <section>
-      {!session?.user.name ? (
-        <button className="cursor-pointer" onClick={() => setIsPopUpOpen(true)}>
+      <button className="cursor-pointer" onClick={() => setIsPopUpOpen(true)}>
           Sign In
         </button>
-      ) : (
-        <button
-          className="cursor-pointer"
-          onClick={() => signOut({ callback: "/" })}
-        >
-          Logout
-        </button>
-      )}
       {isPopUpOpen && <SignInPopUp setIsPopUpOpen={setIsPopUpOpen} />}
     </section>
   );

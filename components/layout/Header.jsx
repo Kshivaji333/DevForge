@@ -1,8 +1,6 @@
 "use client";
 import React from "react";
 import NavBar from "./NavBar";
-import ThemeTougle from "../ui/theme/ThemTougle";
-import SignIn from "../signIn/SignIn.jsx";
 import { SessionProvider } from "next-auth/react";
 
 function Header() {
@@ -10,10 +8,8 @@ function Header() {
     <header className="flex justify-between items-center p-4">
       <h1 className="font-bold text-2xl">DevForge</h1>
       <div className="flex gap-4">
-        <NavBar />
-        <ThemeTougle />
         <SessionProvider>
-          <SignIn />
+          <NavBar />
         </SessionProvider>
       </div>
     </header>
